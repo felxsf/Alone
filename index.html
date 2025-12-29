@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UI/UX Design System – Alone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body>
+  <header class="ds-header">
+    <div class="container">
+      <h1 class="ds-title" data-typing="Alone">Sistema de Diseño</h1>
+      <p class="ds-subtitle" data-typing="Paleta, tipografía, grid, componentes y accesibilidad">Paleta, tipografía, grid, componentes y accesibilidad</p>
+      <nav class="ds-nav" aria-label="Navegación principal">
+        <a href="#tokens">Tokens</a>
+        <a href="#tipografia">Tipografía</a>
+        <a href="#grid">Grid y espaciado</a>
+        <a href="#botones">Botones</a>
+        <a href="#formularios">Formularios</a>
+        <a href="#modales">Modales</a>
+        <a href="#tarjetas">Tarjetas</a>
+        <a href="#accesibilidad">Accesibilidad</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="tokens" class="section">
+      <h2>Paleta de colores y tokens</h2>
+      <div class="grid cols-4 cols-md-2 cols-sm-1">
+        <div class="swatch" style="--swatch: var(--color-primary)"><span>Primary</span></div>
+        <div class="swatch" style="--swatch: var(--color-secondary)"><span>Secondary</span></div>
+        <div class="swatch" style="--swatch: var(--color-success)"><span>Success</span></div>
+        <div class="swatch" style="--swatch: var(--color-danger)"><span>Danger</span></div>
+        <div class="swatch" style="--swatch: var(--color-warning)"><span>Warning</span></div>
+        <div class="swatch" style="--swatch: var(--color-info)"><span>Info</span></div>
+        <div class="swatch" style="--swatch: var(--color-neutral-900)"><span>Neutral 900</span></div>
+        <div class="swatch" style="--swatch: var(--color-neutral-100)"><span>Neutral 100</span></div>
+      </div>
+      <div class="token-table">
+        <div class="token"><code>--space-1</code> 4px</div>
+        <div class="token"><code>--space-2</code> 8px</div>
+        <div class="token"><code>--space-3</code> 12px</div>
+        <div class="token"><code>--space-4</code> 16px</div>
+        <div class="token"><code>--space-5</code> 24px</div>
+        <div class="token"><code>--space-6</code> 32px</div>
+        <div class="token"><code>--radius-sm</code> 8px</div>
+        <div class="token"><code>--radius-md</code> 12px</div>
+        <div class="token"><code>--radius-lg</code> 16px</div>
+        <div class="token"><code>--shadow-sm</code> base</div>
+        <div class="token"><code>--shadow-md</code> elevate</div>
+        <div class="token"><code>--shadow-lg</code> overlay</div>
+      </div>
+    </section>
+
+    <section id="tipografia" class="section">
+      <h2>Tipografía</h2>
+      <div class="type-scale">
+        <p class="text-display">Display: UI/UX Design System</p>
+        <p class="text-h1">H1: Encabezado principal</p>
+        <p class="text-h2">H2: Encabezado secundario</p>
+        <p class="text-h3">H3: Encabezado terciario</p>
+        <p class="text-body-lg">Body Large: lectura cómoda</p>
+        <p class="text-body">Body: párrafo estándar</p>
+        <p class="text-caption">Caption: notas y metadatos</p>
+      </div>
+    </section>
+
+    <section id="grid" class="section">
+      <h2>Grid y espaciado</h2>
+      <div class="grid-demo">
+        <div class="grid cols-12 cols-md-8 cols-sm-4">
+          <div class="grid-box">1</div>
+          <div class="grid-box">2</div>
+          <div class="grid-box">3</div>
+          <div class="grid-box">4</div>
+          <div class="grid-box">5</div>
+          <div class="grid-box">6</div>
+          <div class="grid-box">7</div>
+          <div class="grid-box">8</div>
+          <div class="grid-box">9</div>
+          <div class="grid-box">10</div>
+          <div class="grid-box">11</div>
+          <div class="grid-box">12</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="botones" class="section">
+      <h2>Botones</h2>
+      <div class="stack">
+        <div class="row">
+          <button class="btn btn--primary btn--sm">Primario sm</button>
+          <button class="btn btn--primary btn--md">Primario md</button>
+          <button class="btn btn--primary btn--lg">Primario lg</button>
+        </div>
+        <div class="row">
+          <button class="btn btn--secondary btn--md">Secundario</button>
+          <button class="btn btn--tertiary btn--md">Terciario</button>
+          <button class="btn btn--primary btn--md" disabled>Disabled</button>
+        </div>
+        <div class="row">
+          <button class="btn btn--success btn--md">Success</button>
+          <button class="btn btn--danger btn--md">Danger</button>
+          <button class="btn btn--warning btn--md">Warning</button>
+          <button class="btn btn--info btn--md">Info</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="formularios" class="section">
+      <h2>Campos de formulario</h2>
+      <form class="form" id="demo-form" novalidate>
+        <div class="form-control">
+          <label for="name">Nombre</label>
+          <input id="name" name="name" class="input" type="text" placeholder="Tu nombre" required>
+          <p class="form-hint">Obligatorio</p>
+        </div>
+        <div class="form-control">
+          <label for="email">Email</label>
+          <input id="email" name="email" class="input" type="email" placeholder="nombre@dominio.com" required>
+          <p class="form-hint">Se validará el formato</p>
+        </div>
+        <div class="form-control">
+          <label for="country">País</label>
+          <select id="country" name="country" class="select" required>
+            <option value="" selected>Selecciona tu país</option>
+            <option>España</option>
+            <option>México</option>
+            <option>Argentina</option>
+          </select>
+        </div>
+        <fieldset class="form-control">
+          <legend>Preferencias</legend>
+          <label class="checkbox">
+            <input type="checkbox" name="pref_news" checked>
+            <span>Recibir noticias</span>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="pref_updates">
+            <span>Recibir actualizaciones</span>
+          </label>
+        </fieldset>
+        <fieldset class="form-control">
+          <legend>Plan</legend>
+          <label class="radio">
+            <input type="radio" name="plan" value="basic" checked>
+            <span>Básico</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="plan" value="pro">
+            <span>Pro</span>
+          </label>
+        </fieldset>
+        <div class="row">
+          <button type="submit" class="btn btn--primary btn--md">Enviar</button>
+          <button type="button" class="btn btn--secondary btn--md" id="reset-form">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="modales" class="section">
+      <h2>Modales</h2>
+      <div class="row">
+        <button class="btn btn--primary btn--md" data-open-modal="confirm">Abrir confirmación</button>
+        <button class="btn btn--secondary btn--md" data-open-modal="form">Abrir modal de formulario</button>
+        <button class="btn btn--danger btn--md" data-open-modal="alert">Abrir alerta</button>
+      </div>
+
+      <div class="modal" id="modal-confirm" role="dialog" aria-modal="true" aria-labelledby="modal-confirm-title" aria-hidden="true">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content" tabindex="-1">
+          <h3 id="modal-confirm-title" class="text-h3">Confirmación</h3>
+          <p>¿Deseas continuar con esta acción?</p>
+          <div class="row">
+            <button class="btn btn--secondary" data-close-modal>Cancelar</button>
+            <button class="btn btn--primary">Confirmar</button>
+          </div>
+          <button class="modal__close" aria-label="Cerrar" data-close-modal>&times;</button>
+        </div>
+      </div>
+
+      <div class="modal" id="modal-form" role="dialog" aria-modal="true" aria-labelledby="modal-form-title" aria-hidden="true">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content" tabindex="-1">
+          <h3 id="modal-form-title" class="text-h3">Nuevo elemento</h3>
+          <form class="form" id="modal-form-element" novalidate>
+            <div class="form-control">
+              <label for="title">Título</label>
+              <input id="title" name="title" class="input" type="text" required>
+            </div>
+            <div class="form-control">
+              <label for="type">Tipo</label>
+              <select id="type" name="type" class="select" required>
+                <option value="">Selecciona</option>
+                <option>Nota</option>
+                <option>Tarea</option>
+              </select>
+            </div>
+            <div class="row">
+              <button type="button" class="btn btn--secondary" data-close-modal>Cancelar</button>
+              <button type="submit" class="btn btn--primary">Guardar</button>
+            </div>
+          </form>
+          <button class="modal__close" aria-label="Cerrar" data-close-modal>&times;</button>
+        </div>
+      </div>
+
+      <div class="modal" id="modal-alert" role="alertdialog" aria-modal="true" aria-labelledby="modal-alert-title" aria-describedby="modal-alert-desc" aria-hidden="true">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content" tabindex="-1">
+          <h3 id="modal-alert-title" class="text-h3">Alerta</h3>
+          <p id="modal-alert-desc">Se ha producido un error inesperado.</p>
+          <div class="row">
+            <button class="btn btn--primary" data-close-modal>Aceptar</button>
+          </div>
+          <button class="modal__close" aria-label="Cerrar" data-close-modal>&times;</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="tarjetas" class="section">
+      <h2>Tarjetas</h2>
+      <h3 class="text-h3">De producto</h3>
+      <div class="grid cols-3 cols-md-2 cols-sm-1">
+        <article class="card card--product">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=800&auto=format&fit=crop" alt="Reloj inteligente">
+          <div class="card__body">
+            <h4 class="card__title">Reloj inteligente</h4>
+            <p class="card__text">Monitoriza tu salud y notificaciones.</p>
+            <div class="card__actions">
+              <button class="btn btn--secondary btn--sm">Detalles</button>
+              <button class="btn btn--primary btn--sm">Comprar</button>
+            </div>
+          </div>
+        </article>
+        <article class="card card--product">
+          <img src="https://images.unsplash.com/photo-1512499617640-c2f999098cbe?q=80&w=800&auto=format&fit=crop" alt="Auriculares">
+          <div class="card__body">
+            <h4 class="card__title">Auriculares</h4>
+            <p class="card__text">Sonido premium y cancelación de ruido.</p>
+            <div class="card__actions">
+              <button class="btn btn--secondary btn--sm">Detalles</button>
+              <button class="btn btn--primary btn--sm">Comprar</button>
+            </div>
+          </div>
+        </article>
+        <article class="card card--product card--glitch">
+          <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop" alt="Portátil">
+          <div class="card__body">
+            <h4 class="card__title">Portátil (Glitch)</h4>
+            <p class="card__text">Rendimiento y movilidad sin compromiso.</p>
+            <div class="card__actions">
+              <button class="btn btn--secondary btn--sm">Detalles</button>
+              <button class="btn btn--primary btn--sm">Comprar</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="text-h3">De información</h3>
+      <div class="grid cols-2 cols-sm-1">
+        <article class="card">
+          <div class="card__body">
+            <h4 class="card__title">Estado del sistema</h4>
+            <p class="card__text">Todos los servicios operativos.</p>
+            <div class="chip chip--success">OK</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__body">
+            <h4 class="card__title">Actualización</h4>
+            <p class="card__text">Nueva versión disponible.</p>
+            <div class="chip chip--info">v2.1</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="navegacion" class="section">
+      <h2>Navegación y Estructura</h2>
+      
+      <h3 class="text-h3">Pestañas (Tabs)</h3>
+      <div class="tabs-container">
+        <div class="tab-list" role="tablist">
+          <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-1" id="tab-btn-1">Visión General</button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-2" id="tab-btn-2">Especificaciones</button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-3" id="tab-btn-3">Reseñas</button>
+        </div>
+        <div class="tab-content active" id="tab-1" role="tabpanel" aria-labelledby="tab-btn-1">
+          <p class="text-body">Panel de Visión General. Información principal del producto o servicio.</p>
+        </div>
+        <div class="tab-content" id="tab-2" role="tabpanel" aria-labelledby="tab-btn-2">
+          <p class="text-body">Detalles técnicos y especificaciones avanzadas.</p>
+          <ul class="list">
+            <li>CPU: Neural Processor X1</li>
+            <li>RAM: 64GB Quantum</li>
+            <li>Storage: 2PB Holographic</li>
+          </ul>
+        </div>
+        <div class="tab-content" id="tab-3" role="tabpanel" aria-labelledby="tab-btn-3">
+          <p class="text-body">Opiniones de usuarios verificados.</p>
+        </div>
+      </div>
+
+      <h3 class="text-h3" style="margin-top: 2rem;">Migas de pan (Breadcrumbs)</h3>
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Categoría</a></li>
+          <li><span aria-current="page">Producto Actual</span></li>
+        </ol>
+      </nav>
+
+      <h3 class="text-h3" style="margin-top: 2rem;">Paginación</h3>
+      <nav aria-label="Paginación">
+        <ul class="pagination">
+          <li><a href="#" aria-label="Anterior">&laquo;</a></li>
+          <li><a href="#" class="active" aria-current="page">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><span>...</span></li>
+          <li><a href="#">8</a></li>
+          <li><a href="#" aria-label="Siguiente">&raquo;</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section id="interactivo" class="section">
+      <h2>Componentes Interactivos</h2>
+
+      <div class="grid cols-2 cols-md-1">
+        <div>
+          <h3 class="text-h3">Acordeón</h3>
+          <div class="accordion">
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="true" aria-controls="acc-1" id="acc-btn-1">
+                ¿Qué es el Sistema Alone?
+                <span class="accordion-icon">+</span>
+              </button>
+              <div id="acc-1" class="accordion-panel" role="region" aria-labelledby="acc-btn-1" style="display: block;">
+                <div class="accordion-body">
+                  Es un sistema de diseño UI/UX completo con estética Cyberpunk y accesibilidad integrada.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false" aria-controls="acc-2" id="acc-btn-2">
+                ¿Cómo lo integro?
+                <span class="accordion-icon">+</span>
+              </button>
+              <div id="acc-2" class="accordion-panel" role="region" aria-labelledby="acc-btn-2">
+                <div class="accordion-body">
+                  Copia los archivos CSS y JS a tu proyecto y sigue la guía de clases en la documentación.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false" aria-controls="acc-3" id="acc-btn-3">
+                ¿Es accesible?
+                <span class="accordion-icon">+</span>
+              </button>
+              <div id="acc-3" class="accordion-panel" role="region" aria-labelledby="acc-btn-3">
+                <div class="accordion-body">
+                  Sí, cumple con estándares WCAG 2.1 AA, incluyendo contraste y navegación por teclado.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-h3">Progreso y Estados</h3>
+          <div class="stack">
+            <div>
+              <div class="flex-between">
+                <span class="text-caption">Carga del Sistema</span>
+                <span class="text-caption">75%</span>
+              </div>
+              <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-fill" style="width: 75%;"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex-between">
+                <span class="text-caption">Energía</span>
+                <span class="text-caption">45%</span>
+              </div>
+              <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-fill progress-fill--warning" style="width: 45%;"></div>
+              </div>
+            </div>
+
+            <h3 class="text-h3" style="margin-top: 1rem;">Switches & Toggles</h3>
+            <label class="switch">
+              <input type="checkbox" checked>
+              <span class="switch-slider"></span>
+              <span class="switch-label">Modo Avión</span>
+            </label>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="switch-slider"></span>
+              <span class="switch-label">Bluetooth</span>
+            </label>
+
+            <h3 class="text-h3" style="margin-top: 1rem;">Notificaciones (Toasts)</h3>
+            <div class="row">
+              <button class="btn btn--info btn--sm" onclick="showToast('Información del sistema actualizada', 'info')">Info Toast</button>
+              <button class="btn btn--success btn--sm" onclick="showToast('Operación completada con éxito', 'success')">Success Toast</button>
+              <button class="btn btn--danger btn--sm" onclick="showToast('Error de conexión crítico', 'danger')">Error Toast</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="toast-container"></div>
+
+    <section id="terminal-demo" class="section">
+      <h2>Terminal de Sistema</h2>
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+          <span class="terminal-title">user@alone-os:~</span>
+        </div>
+        <div class="terminal-output" id="term-output">
+          <div>Welcome to AloneOS v1.0. Type 'help' for commands.</div>
+        </div>
+        <div class="terminal-input-line">
+          <span class="prompt">&gt;</span>
+          <input type="text" id="term-input" autocomplete="off" spellcheck="false" placeholder="Escribe un comando...">
+        </div>
+      </div>
+    </section>
+
+    <section id="accesibilidad" class="section">
+      <h2>Accesibilidad</h2>
+      <ul class="list">
+        <li>Contraste suficiente entre texto y fondo.</li>
+        <li>Estados de foco visibles y consistentes.</li>
+        <li>Roles y atributos ARIA en modales y validación.</li>
+        <li>Navegación por teclado: Tab, Shift+Tab, Escape en modales.</li>
+        <li>Tamaños de texto mínimos y escalas responsivas.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="ds-footer">
+    <div class="container">
+      <p>© 2025 UI/UX Design System Alone — Prototipo navegable y documentación</p>
+      <a class="btn btn--tertiary btn--sm" href="docs/GUIDE.md">Guía para desarrolladores</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/bg-effect.js"></script>
+  <script src="assets/js/ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+{
+  "theme": "Cyberpunk Tech",
+  "palette": {
+    "primary": "#00F0FF",
+    "secondary": "#BC13FE",
+    "success": "#00FF9D",
+    "danger": "#FF003C",
+    "warning": "#FIEE00",
+    "info": "#2D6BFF",
+    "background": {
+      "body": "#050510",
+      "surface": "#0E0E1A"
+    },
+    "text": {
+      "main": "#E2E8F0",
+      "muted": "#94A3B8"
+    },
+    "neutral": {
+      "900": "#02020A",
+      "800": "#0A0A14",
+      "700": "#13132B",
+      "600": "#2A2A45",
+      "500": "#565676",
+      "400": "#94A3B8",
+      "300": "#2D2D42",
+      "200": "#1E1E30",
+      "100": "#121220",
+      "50": "#080810"
+    }
+  },
+  "typography": {
+    "family": {
+      "display": "Orbitron",
+      "body": "Inter",
+      "mono": "Courier New"
+    },
+    "baseSize": 16,
+    "scale": {
+      "display": 44,
+      "h1": 32,
+      "h2": 24,
+      "h3": 20,
+      "bodyLg": 18,
+      "body": 16,
+      "caption": 14
+    }
+  },
+  "spacing": {
+    "space1": 4,
+    "space2": 8,
+    "space3": 12,
+    "space4": 16,
+    "space5": 24,
+    "space6": 32,
+    "space7": 64
+  },
+  "radii": {
+    "sm": 2,
+    "md": 4,
+    "lg": 8
+  },
+  "shadows": {
+    "sm": "0 0 10px rgba(0, 240, 255, 0.1)",
+    "md": "0 0 20px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 240, 255, 0.1)",
+    "lg": "0 0 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(188, 19, 254, 0.15)"
+  }
+}
